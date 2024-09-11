@@ -83,7 +83,7 @@ resource "azurerm_resource_group" "this" {
 module "network" {
   source              = "Azure/subnets/azurerm"
   version             = "1.0.0"
-  resource_group_name = azurerm_resource_group.this.name
+  resource_group_name = "aks-gitops"
   subnets = {
     aks = {
       address_prefixes  = ["10.52.0.0/16"]
@@ -123,7 +123,7 @@ module "aks" {
   agents_count                      = null # Please set `agents_count` `null` while `enable_auto_scaling` is `true` to avoid possible `agents_count` changes.
   agents_max_pods                   = var.agents_max_pods
   agents_pool_name                  = "system"
-  agents_availability_zones         = ["1", "2", "3"]
+  agents_availability_zones         = ["1"]
   agents_type                       = "VirtualMachineScaleSets"
   agents_size                       = var.agents_size
   monitor_metrics                   = {}
@@ -216,7 +216,7 @@ resource "kubernetes_secret" "git_secrets" {
     git-addons = {
       type          = "git"
       url           = var.gitops_addons_org
-      # sshPrivateKey = file(pathexpand(var.git_private_ssh_key))
+      sshPrivateKey = file(pathexpand(var.git_private_ssh_key))
     }
   }
   metadata {
