@@ -33,7 +33,7 @@ spec:
               type: WorkloadIdentity
             controlplane:
               ## Optional SSH public key data (must be valid)
-              sshPublicKey: ''
+              sshPublicKey: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCjXXgRl81Q2ykAkrXcfcRGiLEX1MN0t9dIR8UGSiXI1dcMrYr6voJ1T5p4kHfy9vTzlFJUGVEYXUKZCTz5E8GNB2HlZVyN7UHlMVe/sX1WnI2nDs73NoZSrwUsGPUrNYInBsKYL0bOVig/t3pcVajNGaJ606m6pPob/609qTTnyI+qilBEAU8Nb6BnzJWWiPAwmLu9BXn8blYUmICnZ3vzttMatmGCgvY3qjuz1N0JCOHGNi8RV0y2ToNvZ0hqMqXNVQfAPYcEwNrJ2AOkzmMK8bbHGzzix5A2tAwone9/aUQp4osieRNOAxUPqLvVY2chJPJmIm7KND84PzbXSWzEGelBmsyR0GtemL3CkerGAfgmLxLB14IpZgeBEcpwAhQ8R6d316tM9muzdmaH/5Rg1QAfYzgb/uLgyFw23S5hEHL0dczr4mFi4ugjWiUP7Or1Jqu2IWTU2il9+a7Sp6ji9qlNoLk7BLCy6YIFz2J2/f4D4hhIJ7p0SMTrcvLGXh76so/KiZ6SFlRzk4peTKlm1dVBjjyo//vSQNkguASKtmKaRSzYQmj16BHhsmVT+w1GuvlV/JgeTI9DpNYrXAn5r+3vJd/82eLv7RZzVepdz+GcN1IIb7VL983hSJPRCvdFoqDbjPhMFiP8y0pF7/laZC2nwecQ8Lzunse9x1g0hQ== marco@SURFACE-LAPTOP4-MARCO'
             defaults:
               agentPool:
                 sku: Standard_D2s_v3
