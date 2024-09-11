@@ -21,7 +21,7 @@ spec:
         server: https://kubernetes.default.svc
       project: default
       source:
-        repoURL: 'https://github.com/olivomarco/cluster-api-charts' # 'https://mboersma.github.io/cluster-api-charts'
+        repoURL: 'https://olivomarco.github.io/cluster-api-charts' # 'https://mboersma.github.io/cluster-api-charts'
         chart: azure-managed-cluster
         targetRevision: v0.2.4
         helm:
