@@ -37,6 +37,7 @@ spec:
             defaults:
               agentPool:
                 sku: Standard_D2s_v3
+                location: italynorth
       syncPolicy:
         automated:
           prune: true
