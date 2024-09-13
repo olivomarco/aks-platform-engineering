@@ -376,7 +376,7 @@ spec:
               spec:
                 project: default
                 source:    
-                  repoURL: https://github.com/Azure-Samples/aks-platform-engineering
+                  repoURL: https://github.com/olivomarco/aks-platform-engineering
                   targetRevision: HEAD
                   path: gitops/bootstrap/workloads
                 syncPolicy:
