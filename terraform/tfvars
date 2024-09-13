@@ -23,3 +23,6 @@ addons = {
 
 # Resource group name
 resource_group_name = "aks-gitops"
+
+# Set crossplane as infrastructure provider
+infrastructure_provider = "crossplane"
