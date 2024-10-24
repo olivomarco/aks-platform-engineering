@@ -19,6 +19,7 @@ agents_size = "Standard_D2s_v3"
 # Addons configuration
 addons = {
   enable_kyverno                         = false
+  enable_cert_manager                         = true
 }
 
 # Resource group name
