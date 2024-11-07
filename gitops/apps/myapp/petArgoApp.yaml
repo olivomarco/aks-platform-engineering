@@ -6,7 +6,8 @@ metadata:
 spec:
   project: default
   source:    
-      repoURL: github.com/olivomarco/test2.git
+      #repoURL: github.com/olivomarco/test2.git
+      repoURL: github.com/Azure-Samples/aks-store-demo.git
       targetRevision: HEAD
       path: kustomize/overlays/dev             
   syncPolicy:
