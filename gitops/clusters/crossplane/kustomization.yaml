@@ -1,3 +1,4 @@
 resources:
   - base/cluster
   #- clusters/my-app-cluster
+  - clusters/test2demo-cluster
