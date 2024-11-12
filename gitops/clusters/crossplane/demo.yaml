@@ -1,0 +1,4 @@
+resources:
+  - base/cluster
+  #- clusters/my-app-cluster
+  - clusters/fidelidadedemo-cluster
