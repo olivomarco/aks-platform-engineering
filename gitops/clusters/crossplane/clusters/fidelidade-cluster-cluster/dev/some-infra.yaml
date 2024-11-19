@@ -12,7 +12,7 @@ spec:
 apiVersion: storage.azure.upbound.io/v1beta1
 kind: Account
 metadata:
-  name: fidelidade-clustersa948
+  name: fidelidadeclustersa948
   namespace: crossplane-system
 spec:
   forProvider:
