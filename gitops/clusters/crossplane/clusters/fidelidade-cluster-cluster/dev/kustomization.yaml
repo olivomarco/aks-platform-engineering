@@ -3,4 +3,5 @@ namespace: fidelidade-cluster-cluster-dev
 resources:
 - ../base
 - namespace.yaml
+- cluster-claim.yaml
 - some-infra.yaml
