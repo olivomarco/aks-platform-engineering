@@ -25,5 +25,5 @@ spec:
   providerConfigRef:
     name: default                                        # Reference to your existing ProviderConfig
   writeConnectionSecretToRef:
-    name: example-azure-storage-account-connection       # Secret where connection details will be stored
+    name: examplefidelidade-azure-storage-account-connection       # Secret where connection details will be stored
     namespace: crossplane-system
