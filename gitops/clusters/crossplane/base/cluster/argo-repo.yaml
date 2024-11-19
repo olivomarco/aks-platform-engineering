@@ -1,0 +1,19 @@
+apiVersion: v1
+data:
+  project: ZGVmYXVsdA==
+  type: Z2l0
+  url: aHR0cHM6Ly9naXRodWIuY29tL29saXZvbWFyY28vYWtzLXBsYXRmb3JtLWVuZ2luZWVyaW5n
+kind: Secret
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","data":{"project":"ZGVmYXVsdA==","type":"Z2l0","url":"aHR0cHM6Ly9naXRodWIuY29tL29saXZvbWFyY28vYWtzLXBsYXRmb3JtLWVuZ2luZWVyaW5n"},"kind":"Secret","metadata":{"annotations":{"managed-by":"argocd.argoproj.io"},"creationTimestamp":"2024-11-19T10:30:40Z","labels":{"argocd.argoproj.io/secret-type":"repository"},"name":"repo-3578718611","namespace":"argocd","resourceVersion":"21171","uid":"84345fe0-5672-49ce-a489-bd701e2dec3f"}}
+    managed-by: argocd.argoproj.io
+  creationTimestamp: "2024-11-19T10:32:42Z"
+  labels:
+    argocd.argoproj.io/secret-type: repository
+  name: repo-3578718611
+  namespace: argocd
+  resourceVersion: "21811"
+  uid: a87fa42b-7bfc-4d9c-85a2-f1797323164d
+type: Opaque
