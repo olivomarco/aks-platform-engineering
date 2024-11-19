@@ -7,7 +7,6 @@ kind: Secret
 metadata:
   annotations:
     managed-by: argocd.argoproj.io
-  creationTimestamp: "2024-11-19T10:32:42Z"
   labels:
     argocd.argoproj.io/secret-type: repository
   name: repo-3578718611
