@@ -1,0 +1,59 @@
+namespace: fidelidade-cluster-cluster-dev
+
+resources:
+  - ../base
+  - namespace.yaml
+
+patches:
+# patch aks cluster
+- path: cluster-claim.yaml 
+  target:
+    group: kubernetes.example.com
+    version: v1alpha1
+    kind: AksClusterClaim
+    name: fidelidade-cluster-cluster
+- patch: |-
+    - op: replace
+      path: /metadata/name
+      value: fidelidade-cluster-cluster-dev  
+  target:
+    kind: AksClusterClaim
+# patch resource group
+- path: some-infra.yaml 
+  target:
+    group: azure.upbound.io
+    version: v1beta1
+    kind: ResourceGroup
+    name: fidelidade-cluster-rg
+- patch: |-
+    - op: replace
+      path: /metadata/name
+      value: fidelidade-cluster-rg
+  target:
+    kind: ResourceGroup
+# patch storage account
+- path: some-infra.yaml 
+  target:
+    group: storage.azure.upbound.io
+    version: v1beta1
+    kind: Account
+    name: fidelidade-clustersa948
+- patch: |-
+    - op: replace
+      path: /metadata/name
+      value: fidelidade-clustersa948
+  target:
+    kind: ResourceGroup
+# patch resource group name in storage account
+- path: some-infra.yaml 
+  target:
+    group: storage.azure.upbound.io
+    version: v1beta1
+    kind: Account
+    name: fidelidade-clustersa948
+- patch: |-
+    - op: replace
+      path: /spec/forProvider/resourceGroupName
+      value: fidelidade-cluster-rg
+  target:
+    kind: ResourceGroup
