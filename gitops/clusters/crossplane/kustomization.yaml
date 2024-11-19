@@ -4,3 +4,5 @@ resources:
   #- clusters/fidelidade-cluster-cluster
 
   - clusters/fidelidade-cluster
+
+  - clusters/demo1-cluster
