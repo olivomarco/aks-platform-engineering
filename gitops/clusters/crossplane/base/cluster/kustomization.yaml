@@ -2,4 +2,3 @@
 resources:
   - aks-composite-resource-definition.yaml
   - aks-composition.yaml
-  - argo-repo.yaml
