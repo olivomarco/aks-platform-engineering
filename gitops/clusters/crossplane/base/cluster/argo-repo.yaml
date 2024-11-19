@@ -11,6 +11,4 @@ metadata:
     argocd.argoproj.io/secret-type: repository
   name: repo-3578718611
   namespace: argocd
-  resourceVersion: "21811"
-  uid: a87fa42b-7bfc-4d9c-85a2-f1797323164d
 type: Opaque
