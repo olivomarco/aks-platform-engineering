@@ -1,0 +1,4 @@
+apiVersion: kubernetes.example.com/v1alpha1
+kind: AksClusterClaim
+metadata:
+  name: fidelidade-cluster-cluster-dev
