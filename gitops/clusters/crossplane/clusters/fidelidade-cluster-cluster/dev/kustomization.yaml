@@ -4,20 +4,25 @@ resources:
   - ../base
   - namespace.yaml
 
-patches:
-# patch aks cluster
-- path: cluster-claim.yaml 
-  target:
-    group: kubernetes.example.com
-    version: v1alpha1
-    kind: AksClusterClaim
-    name: fidelidade-cluster-cluster
-- patch: |-
-    - op: replace
-      path: /metadata/name
-      value: fidelidade-cluster-cluster-dev  
-  target:
-    kind: AksClusterClaim
+patchesStrategicMerge:
+  - cluster-claim-patch.yaml
+  - resource-group-patch.yaml
+#  - account-patch.yaml
+
+# patches:
+# # patch aks cluster
+# - path: cluster-claim.yaml 
+#   target:
+#     group: kubernetes.example.com
+#     version: v1alpha1
+#     kind: AksClusterClaim
+#     name: fidelidade-cluster-cluster
+# - patch: |-
+#     - op: replace
+#       path: /metadata/name
+#       value: fidelidade-cluster-cluster-dev  
+#   target:
+#     kind: AksClusterClaim
 # # patch resource group
 # - path: some-infra.yaml 
 #   target:
