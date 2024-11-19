@@ -1,5 +1,4 @@
 resources:
   - base/cluster
   #- clusters/my-app-cluster
-
-  - fidelidade-cluster-cluster
+  - clusters/fidelidade-cluster
