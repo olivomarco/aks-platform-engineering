@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "fidelidade"
+spec:
+  type: kubernetes-cluster
+  owner: user:guest
+  lifecycle: experimental
+  providesApis: [example-grpc-api]
