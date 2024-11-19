@@ -1,2 +1,3 @@
 resources:
   - cluster-claim.yaml
+  - argo-repo.yaml
