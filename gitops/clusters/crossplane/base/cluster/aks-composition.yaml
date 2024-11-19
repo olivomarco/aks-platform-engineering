@@ -387,6 +387,32 @@ spec:
       patches:
         - fromFieldPath: metadata.name
           toFieldPath: spec.providerConfigRef.name 
+    - name: deploy-biz-apps
+      base:
+        apiVersion: kubernetes.crossplane.io/v1alpha1
+        kind: Object
+        spec:
+          forProvider:
+            manifest:
+              apiVersion: argoproj.io/v1alpha1
+              kind: Application
+              metadata:
+                name: bizapps-bootstrap
+                namespace: argocd
+              spec:
+                project: default
+                source:    
+                  repoURL: https://github.com/olivomarco/aks-platform-engineering
+                  targetRevision: HEAD
+                  path: gitops/apps/
+                syncPolicy:
+                  automated: {}
+                destination:
+                  namespace: argocd
+                  server: https://kubernetes.default.svc
+      patches:
+        - fromFieldPath: metadata.name
+          toFieldPath: spec.providerConfigRef.name 
   compositeTypeRef:
     apiVersion: kubernetes.example.com/v1alpha1
     kind: XAksCluster
