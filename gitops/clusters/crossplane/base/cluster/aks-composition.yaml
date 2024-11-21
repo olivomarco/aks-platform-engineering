@@ -1,4 +1,3 @@
-
 apiVersion: apiextensions.crossplane.io/v1
 kind: Composition
 metadata:
@@ -404,7 +403,7 @@ spec:
                 source:    
                   repoURL: https://github.com/olivomarco/aks-platform-engineering
                   targetRevision: HEAD
-                  path: gitops/apps/
+                  path: gitops/apps/CLUSTER_NAME
                 syncPolicy:
                   automated: {}
                 destination:
@@ -412,7 +411,13 @@ spec:
                   server: https://kubernetes.default.svc
       patches:
         - fromFieldPath: metadata.name
-          toFieldPath: spec.providerConfigRef.name 
+          toFieldPath: spec.providerConfigRef.name
+        - fromFieldPath: metadata.name
+          toFieldPath: spec.forProvider.manifest.spec.source.path
+          transforms:
+            - type: string
+              string:
+                fmt: "gitops/apps/%s"
   compositeTypeRef:
     apiVersion: kubernetes.example.com/v1alpha1
     kind: XAksCluster
