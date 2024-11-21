@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "test3"
+spec:
+  type: infra
+  owner: user:guest
+  lifecycle: experimental
+  providesApis: [example-grpc-api]
