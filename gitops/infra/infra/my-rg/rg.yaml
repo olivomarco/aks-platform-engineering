@@ -1,0 +1,10 @@
+apiVersion: azure.upbound.io/v1beta1
+kind: ResourceGroup
+metadata:
+  name: test-rg
+  namespace: crossplane-system  # Replace with your desired namespace
+spec:
+  forProvider:
+    location: WestEurope          # Specify your preferred Azure region
+  providerConfigRef:
+    name: default           # Your Azure ProviderConfig reference

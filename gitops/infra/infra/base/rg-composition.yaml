@@ -1,0 +1,46 @@
+apiVersion: apiextensions.crossplane.io/v1
+kind: Composition
+metadata:
+  name: resourcegroup-composition
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+spec:
+  writeConnectionSecretsToNamespace: crossplane-system
+  patchSets:
+    - name: location-patch
+      patches:
+      - type: FromCompositeFieldPath
+        fromFieldPath: spec.location
+        toFieldPath: spec.forProvider.location
+    - name: metadata-patch
+      patches:
+      - type: FromCompositeFieldPath
+        fromFieldPath: metadata.annotations
+        toFieldPath: metadata.annotations
+  resources:
+    - name: resource-group
+      base:
+        apiVersion: azure.upbound.io/v1beta1
+        kind: ResourceGroup
+        spec:
+          forProvider:
+            name: temp
+      patches:
+        - type: PatchSet
+          patchSetName: location-patch
+        - type: PatchSet
+          patchSetName: metadata-patch
+        - type: FromCompositeFieldPath
+          fromFieldPath: metadata.annotations[crossplane.io/external-name]
+          toFieldPath: metadata.annotations[crossplane.io/external-name]
+          transforms:
+          - type: string
+            string:
+              fmt: "%s-rg"
+        - type: FromCompositeFieldPath
+          fromFieldPath: spec.tags
+          toFieldPath: spec.forProvider.tags
+  compositeTypeRef:
+    apiVersion: azure.example.com/v1alpha1
+    kind: XResourceGroup

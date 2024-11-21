@@ -1,0 +1,51 @@
+apiVersion: apiextensions.crossplane.io/v1
+kind: CompositeResourceDefinition
+metadata:
+  name: xresourcegroups.azure.example.com
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+spec:
+  connectionSecretKeys:
+  - resourceGroupName
+  group: azure.example.com
+  names:
+    kind: XResourceGroup
+    plural: xresourcegroups
+  versions:
+  - name: v1alpha1
+    schema:
+      openAPIV3Schema:
+        type: object
+        properties:
+          spec:
+            type: object
+            properties:
+              location:
+                type: string
+                description: specifies the location of the Azure Resource Group
+              tags:
+                type: object
+                description: specifies the tags for the Azure Resource Group
+                additionalProperties:
+                  type: string
+            required:
+              - location
+          status:
+            description: Property bag for resource IDs.
+            properties:
+              atProvider:
+                description: keeps the state for the external ids
+                properties:
+                  resourceGroupId:
+                    description: Azure resource ID of the Resource Group
+                    type: string
+                required:
+                - resourceGroupId
+                type: object
+            type: object
+    served: true
+    referenceable: true
+  claimNames:
+    kind: ResourceGroupClaim
+    plural: resourcegroupclaims

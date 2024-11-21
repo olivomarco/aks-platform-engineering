@@ -1,0 +1,4 @@
+---
+resources:
+  - rg-composite-resource-definition.yaml
+  - rg-composition.yaml
