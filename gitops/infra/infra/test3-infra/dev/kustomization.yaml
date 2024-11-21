@@ -1,0 +1,5 @@
+namespace: test3-cluster-dev
+
+resources:
+  - ../base
+  - namespace.yaml

@@ -1,3 +1,4 @@
 resources:
   - base
   #- my-rg
+  - test3-infra
