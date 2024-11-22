@@ -419,7 +419,7 @@ spec:
               string:
                 fmt: "gitops/apps/%s"
                 regexp:
-                  match: "^([^-]+)"
+                  match: "^(.*?)-cluster"
                   group: 1
   compositeTypeRef:
     apiVersion: kubernetes.example.com/v1alpha1
