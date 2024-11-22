@@ -1,5 +1,3 @@
 resources:
   - base
   #- my-rg
-
-  - ollyinfra2-infra
