@@ -417,13 +417,10 @@ spec:
           transforms:
             - type: string
               string:
-                fmt: "%s"
+                fmt: "gitops/apps/%s"
                 regexp:
                   match: "^([^-]+)"
                   group: 1
-            - type: string
-              string:
-                fmt: "gitops/apps/%s"
   compositeTypeRef:
     apiVersion: kubernetes.example.com/v1alpha1
     kind: XAksCluster
