@@ -419,8 +419,8 @@ spec:
               string:
                 fmt: "gitops/apps/%s"
                 regexp:
-                  match: "^(.*?)-cluster"
-                  group: 0
+                  match: "^(.*)-cluster"
+                  group: 1
   compositeTypeRef:
     apiVersion: kubernetes.example.com/v1alpha1
     kind: XAksCluster
