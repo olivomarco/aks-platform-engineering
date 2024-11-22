@@ -413,7 +413,11 @@ spec:
         - fromFieldPath: metadata.name
           toFieldPath: spec.providerConfigRef.name
         - fromFieldPath: metadata.baseName
-          toFieldPath: spec.forProvider.manifest.spec.source.path
+          toFieldPath: spec.forProvider.manifest.spec.source.
+          transforms:
+            - type: string
+              string:
+                fmt: "gitops/apps/%s"
   compositeTypeRef:
     apiVersion: kubernetes.example.com/v1alpha1
     kind: XAksCluster
