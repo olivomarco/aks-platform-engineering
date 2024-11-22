@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:    
-      repoURL: https://github.com/olivomarco/demo1code.git
+      repoURL: https://github.com/olivomarco/demo2code.git
       targetRevision: HEAD
       path: kustomize/overlays/dev
   syncPolicy:
