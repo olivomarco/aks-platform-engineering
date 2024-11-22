@@ -1,0 +1,7 @@
+namespace: test4-cluster-dev
+
+resources:
+  - ../base
+  - namespace.yaml
+  - resourcegroup.yaml
+  - storageaccount.yaml
