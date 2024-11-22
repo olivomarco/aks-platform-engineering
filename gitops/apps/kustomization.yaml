@@ -1,3 +1,2 @@
 resources:
   #- myapp/petArgoApp.yaml
-  #- demo1aks/demo1svc/sampleArgoApp.yaml
