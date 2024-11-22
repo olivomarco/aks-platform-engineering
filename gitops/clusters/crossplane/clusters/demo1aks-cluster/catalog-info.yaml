@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "demo1aks"
+spec:
+  type: kubernetes-cluster
+  owner: group:team-a
+  lifecycle: experimental
+  providesApis: [example-grpc-api]
