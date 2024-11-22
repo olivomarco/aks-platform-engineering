@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "demo2svc"
+spec:
+  type: service
+  owner: group:team-a
+  lifecycle: experimental
