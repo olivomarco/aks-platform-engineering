@@ -412,7 +412,7 @@ spec:
       patches:
         - fromFieldPath: metadata.name
           toFieldPath: spec.providerConfigRef.name
-        - fromFieldPath: metadata.name
+        - fromFieldPath: metadata.namespace
           toFieldPath: spec.forProvider.manifest.spec.source.path
           transforms:
             - type: string
