@@ -410,7 +410,7 @@ spec:
                   namespace: argocd
                   server: https://kubernetes.default.svc
       patches:
-        - fromFieldPath: metadata.name
+        - fromFieldPath: metadata.namespace
           toFieldPath: spec.providerConfigRef.name
         - fromFieldPath: metadata.namespace
           toFieldPath: spec.forProvider.manifest.spec.source.path
