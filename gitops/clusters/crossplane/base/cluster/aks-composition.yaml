@@ -409,15 +409,15 @@ spec:
                 destination:
                   namespace: argocd
                   server: https://kubernetes.default.svc
-      # patches:
-      #   - fromFieldPath: metadata.namespace
-      #     toFieldPath: spec.providerConfigRef.name
-      #   - fromFieldPath: metadata.namespace
-      #     toFieldPath: spec.forProvider.manifest.spec.source.path
-      #     transforms:
-      #       - type: string
-      #         string:
-      #           fmt: "gitops/apps/%s"
+      patches:
+        - fromFieldPath: metadata.namespace
+          toFieldPath: spec.providerConfigRef.name
+        - fromFieldPath: metadata.namespace
+          toFieldPath: spec.forProvider.manifest.spec.source.path
+          transforms:
+            - type: string
+              string:
+                fmt: "gitops/apps/%s"
   compositeTypeRef:
     apiVersion: kubernetes.example.com/v1alpha1
     kind: XAksCluster
