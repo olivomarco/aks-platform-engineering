@@ -417,6 +417,7 @@ spec:
           transforms:
             - type: string
               string:
+                fmt: "%s"
                 regexp:
                   match: "^([^-]+)"
                   group: 1
