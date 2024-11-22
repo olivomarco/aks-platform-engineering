@@ -1,0 +1,7 @@
+namespace: ollyinfra2-infra-dev
+
+resources:
+  - ../base
+  - namespace.yaml
+  - resourcegroup.yaml
+  - storageaccount.yaml
