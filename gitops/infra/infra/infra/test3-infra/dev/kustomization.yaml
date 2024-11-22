@@ -1,4 +1,4 @@
-namespace: test3-cluster-dev
+namespace: test3-infra-dev
 
 resources:
   - ../base
