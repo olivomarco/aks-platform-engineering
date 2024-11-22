@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "ollyinfra"
+spec:
+  type: infra
+  owner: group:team-a
+  lifecycle: experimental
+  providesApis: [example-grpc-api]
