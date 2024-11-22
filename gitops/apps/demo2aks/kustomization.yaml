@@ -1,0 +1,4 @@
+resources:
+  #- myapp/sampleArgoApp.yaml
+  - demo1svc/sampleArgoApp.yaml
+  - demo1svc/sampleArgoApp.yaml
