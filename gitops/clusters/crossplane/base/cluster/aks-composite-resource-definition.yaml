@@ -21,6 +21,8 @@ spec:
           spec:
             type: object
             properties:
+              baseName:
+                type: string
               location:
                 type: string
                 description: specifies the location of the Azure resources

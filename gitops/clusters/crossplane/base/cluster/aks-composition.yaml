@@ -412,15 +412,8 @@ spec:
       patches:
         - fromFieldPath: metadata.name
           toFieldPath: spec.providerConfigRef.name
-        - fromFieldPath: metadata.name
+        - fromFieldPath: metadata.baseName
           toFieldPath: spec.forProvider.manifest.spec.source.path
-          transforms:
-            - type: string
-              string:
-                fmt: "gitops/apps/%s"
-                regexp:
-                  match: "^(.*)-cluster"
-                  group: 1
   compositeTypeRef:
     apiVersion: kubernetes.example.com/v1alpha1
     kind: XAksCluster
