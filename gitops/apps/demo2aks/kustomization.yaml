@@ -1,3 +1,0 @@
-resources:
-  #- myapp/sampleArgoApp.yaml
-  - demo2svc/sampleArgoApp.yaml
