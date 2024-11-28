@@ -1,0 +1,19 @@
+
+apiVersion: kubernetes.example.com/v1alpha1
+kind: AksClusterClaim
+metadata:
+  name: demo3-cluster
+  annotations:
+    crossplane.io/external-name: demo3-cluster-dev  
+spec:
+  writeConnectionSecretToRef:
+    name: my-app-cluster-dev-secret
+  baseName: demo3
+  location: "North Europe"
+  aks:
+    adminUser: 1d88bc41-2fb3-4e69-8342-b47b1939b630
+    tags:
+      environment: dev
+  virtualNetwork:
+    tags:
+      environment: dev   
