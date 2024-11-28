@@ -4,3 +4,4 @@ resources:
   - clusters/demo1aks-cluster
 
   - clusters/demo2aks-cluster
+  - clusters/demo3-cluster
