@@ -1,0 +1,7 @@
+namespace: testolly111-infra-dev
+
+resources:
+  - ../base
+  - namespace.yaml
+  - resourcegroup.yaml
+  - storageaccount.yaml
