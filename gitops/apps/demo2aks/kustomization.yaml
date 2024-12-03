@@ -1,3 +1,2 @@
 resources:
   #- myapp/sampleArgoApp.yaml
-  - fidedemoapp/sampleArgoApp.yaml
