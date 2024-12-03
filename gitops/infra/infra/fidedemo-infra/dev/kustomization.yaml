@@ -1,0 +1,7 @@
+namespace: fidedemo-infra-dev
+
+resources:
+  - ../base
+  - namespace.yaml
+  - resourcegroup.yaml
+  - storageaccount.yaml

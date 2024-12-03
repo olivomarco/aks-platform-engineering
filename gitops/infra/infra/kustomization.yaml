@@ -3,3 +3,4 @@ resources:
   #- my-rg
 
   - testolly111-infra
+  - fidedemo-infra
