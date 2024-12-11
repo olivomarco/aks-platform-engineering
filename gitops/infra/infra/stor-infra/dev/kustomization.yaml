@@ -1,7 +1,0 @@
-namespace: stor-infra-dev
-
-resources:
-  - ../base
-  - namespace.yaml
-  - resourcegroup.yaml
-  - storageaccount.yaml

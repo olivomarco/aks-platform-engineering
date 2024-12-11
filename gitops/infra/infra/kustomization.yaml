@@ -1,5 +1,3 @@
 resources:
   - base
   #- my-rg
-
-  - stor-infra
