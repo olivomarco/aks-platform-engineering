@@ -1,0 +1,3 @@
+resources:
+  #- myapp/sampleArgoApp.yaml
+  - demopeapp2/sampleArgoApp.yaml
