@@ -1,0 +1,21 @@
+namespace: demoaks3-cluster-dev
+
+resources:
+  - ../base
+  - namespace.yaml
+  #- some-infra.yaml
+
+patches:
+# patch aks cluster
+- path: cluster-claim.yaml 
+  target:
+    group: kubernetes.example.com
+    version: v1alpha1
+    kind: AksClusterClaim
+    name: demoaks3-cluster
+- patch: |-
+    - op: replace
+      path: /metadata/name
+      value: demoaks3-cluster-dev  
+  target:
+    kind: AksClusterClaim
