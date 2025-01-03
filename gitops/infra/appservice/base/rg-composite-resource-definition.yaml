@@ -47,5 +47,5 @@ spec:
     served: true
     referenceable: true
   claimNames:
-    kind: ResourceGroupClaim
-    plural: resourcegroupclaims
+    kind: ResourceGroupClaimAppservice
+    plural: resourcegroupclaimsappservice
