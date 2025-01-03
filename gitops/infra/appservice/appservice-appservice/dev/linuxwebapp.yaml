@@ -13,9 +13,9 @@ spec:
     resourceGroupNameSelector:
       matchLabels:
         testing.upbound.io/example-name: testing2-rg
-    servicePlanIdRef:
-      name: myplan
-    # servicePlanIdSelector:
-    #   matchLabels:
-    #     testing.upbound.io/example-name: myplan
+    # servicePlanIdRef:
+    #   name: myplan
+    servicePlanIdSelector:
+      matchLabels:
+        testing.upbound.io/example-name: myplan
     siteConfig: {}
