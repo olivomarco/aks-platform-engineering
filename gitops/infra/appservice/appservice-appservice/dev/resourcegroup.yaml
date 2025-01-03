@@ -3,6 +3,8 @@ kind: ResourceGroup
 metadata:
   name: testing2-rg
   namespace: crossplane-system  # Replace with your desired namespace
+  annotations:
+    testing.upbound.io/example-name: testing2-rg
 spec:
   forProvider:
     location: WestEurope          # Specify your preferred Azure region
