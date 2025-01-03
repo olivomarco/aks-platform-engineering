@@ -1,15 +1,14 @@
-apiVersion: web.azure.upbound.io/v1beta1
+apiVersion: web.azure.upbound.io/v1beta2
 kind: AppServicePlan
 metadata:
   annotations:
-    meta.upbound.io/example-id: web/v1beta1/appserviceplan
+    meta.upbound.io/example-id: web/v1beta2/appserviceplan
   labels:
     testing.upbound.io/example-name: appservice-appservice-plan
   name: appservice-appservice-plan
 spec:
   forProvider:
     location: West Europe
-    resourceGroupName: testing2-rg
     #resourceGroupNameSelector:
     #  matchLabels:
     #    testing.upbound.io/example-name: testing2-rg
