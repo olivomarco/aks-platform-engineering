@@ -2,4 +2,4 @@ resources:
   - base
   #- my-rg
 
-  - appservice-appservice
+  #- appservice-appservice
