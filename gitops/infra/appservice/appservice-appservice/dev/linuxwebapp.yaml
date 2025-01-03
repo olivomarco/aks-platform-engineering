@@ -13,8 +13,7 @@ spec:
     #resourceGroupNameSelector:
     #  matchLabels:
     #    testing.upbound.io/example-name: testing2-rg
-    servicePlanId: appservice-appservice-plan
-    # servicePlanIdSelector:
-    #   matchLabels:
-    #     testing.upbound.io/example-name: appservice-appservice-plan
+    servicePlanIdSelector:
+      matchLabels:
+        testing.upbound.io/example-name: appservice-appservice-plan
     siteConfig: {}
