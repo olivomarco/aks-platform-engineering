@@ -1,0 +1,8 @@
+namespace: appservice-infra-dev
+
+resources:
+  - ../base
+  - namespace.yaml
+  - resourcegroup.yaml
+  - appserviceplan.yaml
+  - linuxwebapp.yaml
