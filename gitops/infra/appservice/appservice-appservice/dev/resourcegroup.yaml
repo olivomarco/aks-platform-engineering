@@ -1,7 +1,7 @@
 apiVersion: azure.upbound.io/v1beta1
 kind: ResourceGroup
 metadata:
-  name: 
+  name: testing2-rg
   namespace: crossplane-system  # Replace with your desired namespace
 spec:
   forProvider:
