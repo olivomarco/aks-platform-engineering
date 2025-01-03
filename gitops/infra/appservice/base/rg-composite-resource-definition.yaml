@@ -11,7 +11,7 @@ spec:
   group: azure.example.com
   names:
     kind: XResourceGroup
-    plural: xresourcegroups
+    plural: xresourcegroups-appservice
   versions:
   - name: v1alpha1
     schema:
