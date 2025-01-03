@@ -11,7 +11,7 @@ spec:
     location: West Europe
     resourceGroupNameSelector:
       matchLabels:
-        testing.upbound.io/example-name: -rg
+        testing.upbound.io/example-name: testing2-rg
     sku:
       - size: S1
         tier: Standard
