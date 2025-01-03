@@ -10,7 +10,7 @@ spec:
   - resourceGroupName
   group: azure.example.com
   names:
-    kind: XResourceGroup
+    kind: XResourceGroupAppService
     plural: xresourcegroups-appservice
   versions:
   - name: v1alpha1
