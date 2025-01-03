@@ -1,0 +1,19 @@
+apiVersion: web.azure.upbound.io/v1beta1
+kind: LinuxWebApp
+metadata:
+  annotations:
+    meta.upbound.io/example-id: web/v1beta1/linuxwebapp
+  labels:
+    testing.upbound.io/example-name: appservice-webapp
+  name: appservice-webapp
+spec:
+  forProvider:
+    location: West Europe
+    resourceGroupNameSelector:
+      matchLabels:
+        testing.upbound.io/example-name: -rg
+    servicePlanIdSelector:
+      matchLabels:
+        testing.upbound.io/example-name: appservice-appservice-plan
+    siteConfig:
+      - {}
