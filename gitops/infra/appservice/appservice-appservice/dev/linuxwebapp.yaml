@@ -16,5 +16,4 @@ spec:
     servicePlanIdSelector:
       matchLabels:
         testing.upbound.io/example-name: appservice-appservice-plan
-    siteConfig:
-      - {}
+    siteConfig: {}
