@@ -3,7 +3,7 @@ kind: ResourceGroup
 metadata:
   name: testing2-rg
   namespace: crossplane-system  # Replace with your desired namespace
-  annotations:
+  labels:
     testing.upbound.io/example-name: testing2-rg
 spec:
   forProvider:
