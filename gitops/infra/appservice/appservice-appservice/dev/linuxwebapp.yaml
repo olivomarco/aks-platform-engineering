@@ -9,10 +9,10 @@ metadata:
 spec:
   forProvider:
     location: West Europe
-    resourceGroupName: testing2-rg
-    #resourceGroupNameSelector:
-    #  matchLabels:
-    #    testing.upbound.io/example-name: testing2-rg
+    #resourceGroupName: testing2-rg
+    resourceGroupNameSelector:
+      matchLabels:
+        testing.upbound.io/example-name: testing2-rg
     servicePlanIdSelector:
       matchLabels:
         testing.upbound.io/example-name: appservice-appservice-plan
