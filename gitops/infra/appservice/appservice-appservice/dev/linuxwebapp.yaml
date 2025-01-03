@@ -14,8 +14,8 @@ spec:
       matchLabels:
         testing.upbound.io/example-name: testing2-rg
     servicePlanIdRef:
-      name: appservice-appservice-plan
+      name: myplan
     # servicePlanIdSelector:
     #   matchLabels:
-    #     testing.upbound.io/example-name: appservice-appservice-plan
+    #     testing.upbound.io/example-name: myplan
     siteConfig: {}

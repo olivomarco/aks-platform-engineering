@@ -4,8 +4,8 @@ metadata:
   annotations:
     meta.upbound.io/example-id: web/v1beta2/appserviceplan
   labels:
-    testing.upbound.io/example-name: appservice-appservice-plan
-  name: appservice-appservice-plan
+    testing.upbound.io/example-name: myplan
+  name: myplan
 spec:
   forProvider:
     location: West Europe
