@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "swedishapp"
+spec:
+  type: service
+  owner: group:team-a
+  lifecycle: experimental
