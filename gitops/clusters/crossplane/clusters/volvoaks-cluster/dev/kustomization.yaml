@@ -1,0 +1,21 @@
+namespace: volvoaks-cluster-dev
+
+resources:
+  - ../base
+  - namespace.yaml
+  #- some-infra.yaml
+
+patches:
+# patch aks cluster
+- path: cluster-claim.yaml 
+  target:
+    group: kubernetes.example.com
+    version: v1alpha1
+    kind: AksClusterClaim
+    name: volvoaks-cluster
+- patch: |-
+    - op: replace
+      path: /metadata/name
+      value: volvoaks-cluster-dev  
+  target:
+    kind: AksClusterClaim
