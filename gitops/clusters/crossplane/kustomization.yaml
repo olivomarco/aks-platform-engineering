@@ -2,4 +2,4 @@ resources:
   - base/cluster
   #- clusters/my-app-cluster
   - clusters/demo1aks-cluster
-  - clusters/demo2aks-cluster
+  #- clusters/demo2aks-cluster
