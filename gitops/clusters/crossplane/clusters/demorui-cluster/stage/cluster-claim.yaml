@@ -1,0 +1,20 @@
+
+apiVersion: kubernetes.example.com/v1alpha1
+kind: AksClusterClaim
+metadata:
+  name: demorui-cluster-stage
+  annotations:
+    crossplane.io/external-name: demorui-cluster-stage 
+spec:
+  writeConnectionSecretToRef:
+    name: my-app-cluster-stage-secret    
+  baseName: demorui
+  location: "EastUs"
+  aks:
+    adminUser: 1d88bc41-2fb3-4e69-8342-b47b1939b630
+    tags:
+      environment: stage
+  virtualNetwork:
+    tags:
+      environment: stage     
+  
