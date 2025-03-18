@@ -1,0 +1,29 @@
+apiVersion: azure.upbound.io/v1beta1
+kind: ResourceGroup
+metadata:
+  name: demorui-rg
+  namespace: crossplane-system  # Replace with your desired namespace
+spec:
+  forProvider:
+    location: WestEurope          # Specify your preferred Azure region
+  providerConfigRef:
+    name: default           # Your Azure ProviderConfig reference
+---
+apiVersion: storage.azure.upbound.io/v1beta1
+kind: Account
+metadata:
+  name: demoruisa948
+  namespace: crossplane-system
+spec:
+  forProvider:
+    resourceGroupName: demorui-rg      # Name of the ResourceGroup created earlier
+    location: WestEurope                                 # Azure region, should match the ResourceGroup
+    accountReplicationType: LRS                          # Set the replication type, e.g., LRS, GRS, RAGRS, ZRS
+    accountTier: Standard                                # Set the tier, e.g., Standard or Premium
+    allowNestedItemsToBePublic: true                     # Optional, based on your requirements
+    allowedCopyScope: AAD                                # Optional, restricts copy scope (e.g., AAD or PrivateLink)
+  providerConfigRef:
+    name: default                                        # Reference to your existing ProviderConfig
+  writeConnectionSecretToRef:
+    name: demorui-azure-storage-account-connection       # Secret where connection details will be stored
+    namespace: crossplane-system
