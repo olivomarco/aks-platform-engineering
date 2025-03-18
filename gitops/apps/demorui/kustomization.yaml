@@ -1,3 +1,0 @@
-resources:
-  #- myapp/sampleArgoApp.yaml
-  - demorui.deploy/sampleArgoApp.yaml
