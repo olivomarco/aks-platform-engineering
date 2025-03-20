@@ -1,0 +1,3 @@
+resources:
+  #- myapp/sampleArgoApp.yaml
+  - altermaind.deploy/sampleArgoApp.yaml
